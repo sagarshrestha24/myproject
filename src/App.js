@@ -10,7 +10,7 @@ const FormPage = () => {
             <div className="header pt-3 peach-gradient">
               <MDBRow className="d-flex justify-content-center">
                 <h3 className="white-text mb-3 pt-3 font-weight-bold">
-                  Log in
+                Sign in
                 </h3>
               </MDBRow>
               <MDBRow className="mt-2 mb-3 d-flex justify-content-center">

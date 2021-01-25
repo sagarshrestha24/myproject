@@ -44,6 +44,7 @@ jobs:
           git pull origin main
           npm install 
           pm2 start npm -- start
+          docker-compose up -d 
 
       
   

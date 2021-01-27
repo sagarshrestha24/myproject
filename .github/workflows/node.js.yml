@@ -45,7 +45,8 @@ jobs:
           mkdir -p ~/my-express-app/
           cd ~/my-express-app/
           git clone https://github.com/sagarshrestha24/myproject.git
-          cd myproject
+          cd ~/myproject
+          docker-compose build
           docker-compose up -d 
 
       

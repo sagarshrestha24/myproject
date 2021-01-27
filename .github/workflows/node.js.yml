@@ -41,10 +41,9 @@ jobs:
         key: ${{ secrets.SECRET_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          
-          cd ~/myproject
+          git clone https://github.com/sagarshrestha24/myproject.git
+          cd myproject
           git pull origin main
-          
           docker-compose up -d 
 
       

@@ -6,6 +6,8 @@ on:
       - main
 
 jobs:
+  
+   
   linter:
     runs-on: self-hosted
     steps:
@@ -23,7 +25,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 10.x]
+        node-version: [10.x]
 
     steps:
     - uses: actions/checkout@v2

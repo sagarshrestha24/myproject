@@ -33,7 +33,7 @@ jobs:
     - name: Lint Dockerfile
       uses: brpaz/hadolint-action@master
       with:
-          dockerfile: "Dockerfile"
+          dockerfile: ./Dockerfile
 
   deploy:
     needs: [test]

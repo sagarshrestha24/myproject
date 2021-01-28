@@ -29,6 +29,11 @@ jobs:
         pm2 start npm
       env:
         CI: true
+           
+    - name: Lint Dockerfile
+      uses: brpaz/hadolint-action@master
+      with:
+          dockerfile: "Dockerfile"
 
   deploy:
     needs: [test]
@@ -50,11 +55,7 @@ jobs:
           git clone https://github.com/sagarshrestha24/myproject.git
           cd ~/myproject
           docker-compose build
-          
-    - name: Lint Dockerfile
-      uses: brpaz/hadolint-action@master
-      with:
-          dockerfile: "Dockerfile"
+   
 
 
       

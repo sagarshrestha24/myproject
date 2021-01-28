@@ -35,6 +35,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v2
     - name: SSH and deploy node app
       uses: appleboy/ssh-action@master
       with:
@@ -49,12 +50,7 @@ jobs:
           git clone https://github.com/sagarshrestha24/myproject.git
           cd ~/myproject
           docker-compose build
-          docker-compose up -d 
           
-    
-
-    
-
     - name: Lint Dockerfile
       uses: brpaz/hadolint-action@master
       with:

@@ -7,18 +7,6 @@ on:
 
 jobs:
   
-   
-  linter:
-    runs-on: self-hosted
-    steps:
-
-      - uses: actions/checkout@v2
-
-      - name: Lint Dockerfile
-        uses: brpaz/hadolint-action@master
-        with:
-          dockerfile: "Dockerfile"
-   
   test:
 
     runs-on: self-hosted
@@ -54,6 +42,7 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SECRET_KEY }}
         port: ${{ secrets.SSH_PORT }}
+      
         script: |
           mkdir -p ~/my-express-app/
           cd ~/my-express-app/
@@ -61,6 +50,16 @@ jobs:
           cd ~/myproject
           docker-compose build
           docker-compose up -d 
+          
+    
+
+    
+
+    - name: Lint Dockerfile
+      uses: brpaz/hadolint-action@master
+      with:
+          dockerfile: "Dockerfile"
+
 
       
   

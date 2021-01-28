@@ -6,6 +6,17 @@ on:
       - main
 
 jobs:
+  linter:
+    runs-on: self-hosted
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Lint Dockerfile
+        uses: brpaz/hadolint-action@master
+        with:
+          dockerfile: "Dockerfile"
+   
   test:
 
     runs-on: self-hosted

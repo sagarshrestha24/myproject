@@ -27,8 +27,7 @@ jobs:
         npm run build
         pm2 stop npm
         pm2 start npm
-      env:
-        CI: true
+
            
     - name: Lint Dockerfile
       uses: brpaz/hadolint-action@master
